@@ -1,0 +1,73 @@
+<div class="bg-extended">
+	
+	<div class="align-vertical-center">
+		
+		<div class="container">
+			
+			<div class="row">
+				
+				<div class="well col-sm-offset-3 col-sm-6">
+					 
+					 <div class="well-heading well-primary">
+                        <h1>Registration Form</h1>
+                    </div>
+                    
+                    <form class="well-body" name="userForm" ng-submit="submitForm()" novalidate>
+                    
+	                    <!-- USERNAME -->
+	       				 <div class="form-group label-floating" ng-class="{ 'has-error is-focused' : userForm.username.$invalid && !userForm.username.$pristine }">
+				            <label class="control-label" for="username">Username</label>
+				            <input type="text" name="username" class="form-control" ng-model="username" ng-minlength="3" ng-maxlength="8" required>
+				           <p ng-show="userForm.username.$invalid && !userForm.username.$pristine" class="help-block">Username is required.</p>
+				        </div>
+				        
+				       	
+                    	<!-- Password -->
+	       				 <div class="form-group label-floating" ng-class="{ 'has-error is-focused' : userForm.password.$invalid && !userForm.password.$pristine }">
+				            <label class="control-label" for="password">Password</label>
+				            <input type="password" name="password" class="form-control" ng-model="password" required
+				            ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/"> 
+				           <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Password should be atleast 8 characters long
+                    		and should contain one number,one character and one special
+                    		character</p>
+                    		</div>
+                    	
+                    	 <!-- Confirm PASSWORD -->
+                    	 <div class="form-group label-floating" ng-class="{ 'has-error is-focused' : userForm.confirm_password.$error.passwordVerify }">
+                    	 	 <label class="control-label" for="confirm_password">Confirm Password</label>
+                    	 	 <input type="password" name=confirm_password class="form-control" ng-model="password_verify" 
+                    	 	 required password-verify="password">
+                    	 	 <span ng-show="userForm.confirm_password.$error.passwordVerify" class="help-block">
+       						 Fields are not equal!</span>
+                    	 </div>
+                    	
+					     <!-- EMAIL -->
+				        <div class="form-group label-floating" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+				            <label class="control-label" for="email">Email</label>
+				            <input type="email" name="email" class="form-control" ng-model="email">
+				            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+				        </div>
+				        
+				        <div class="form-group">
+                    	<label class="control-label" for="selectedRole">Select Role</label>
+                    	<select ng-model="selectedRole"
+                    	ng-options="a.id as a.type for a in names">
+						<!-- <option ng-repeat="x in names">{{x}}</option> -->
+						</select>
+                   		 </div>
+                    	
+                    	<div class="col-sm-offset-3 col-sm-6" align="center">
+		                     <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">
+		                      Submit</button>
+	                  	</div>
+                    	
+                    </form>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+
+</div>

@@ -1,0 +1,96 @@
+{
+  "name": "project",
+  "description": "test",
+  "main": "",
+  "authors": [
+    "bimal"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-messages": "^1.5.9",
+    "lodash": "^4.17.2",
+    "pure": "^0.6.0",
+    "requirejs": "^2.3.2",
+    "spring-security-csrf-token-interceptor": "^0.1.5",
+    "angular-resource": "^1.5.9",
+    "angular-route": "^1.5.9",
+    "angular-animate": "^1.5.9",
+    "angular-spinkit": "^0.3.4",
+    "angular-http-auth": "1.2.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "2.1.4",
+    "bootstrap": "3.3.5",
+    "bootstrap-material-design": "0.4.4",
+    "angular-swagger-ui": "^0.3.4",
+    "angular-sanitize": "^1.6.0",
+    "bootstrap-datetimepicker": "^0.0.11"
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    },
+    "bootstrap-datetimepicker":{
+    	"main": [
+    		"build/css/bootstrap-datetimepicker.min.css",
+    		"build/css/bootstrap-datetimepicker.min.js"
+    	]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.min.js"
+      ]
+    },
+    "bootstrap-material-design": {
+      "dependencies": {
+        "jquery": "^2.1.4",
+        "bootstrap": "^3.3.5"
+      }
+    },
+    "angular-http-auth": {
+      "dependencies": {
+        "angular": "~1.5"
+      }
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/FontAwesome.otf",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    }
+  },
+  "angular-swagger-ui": {
+    "dependencies": {
+      "angular": "~1.5.9",
+      "angular-sanitize": "~1.6.0",
+      "bootstrap-less-only": "~3.3"
+    },
+    "main": [
+      "dist/scripts/swagger-ui.js",
+      "dist/css/swagger-ui.css"
+    ]
+  },
+  "resolutions": {
+    "angular-http-auth": "^1.5.0",
+    "angular": "^1.5.9",
+    "jquery": "2.1.4",
+    "bootstrap": "3.3.5"
+  }
+}

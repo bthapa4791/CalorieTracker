@@ -1,0 +1,3 @@
+ sudo npm install --allow-root
+ sudo bower install --allow-root
+ sudo gulp install --allow-root
